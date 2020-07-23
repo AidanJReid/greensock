@@ -1,17 +1,21 @@
-gsap.from(".head", {duration: 2, opacity: 0, scale: 0.1, ease: "back"});
+var tl = gsap.timeline();
 
-gsap.from(".circle", {duration: 1, opacity: 0, y: "random(-200, 200)", stagger: 0.25});
+tl.from(".head", {duration: 2, opacity: 0, scale: 0.1, ease: "back"});
 
-gsap.to("#purple", {duration: 2, backgroundColor: "purple"});
+tl.from(".circle", {duration: 1, opacity: 0, y: "random(-200, 200)", stagger: 0.25});
 
-gsap.to("#blue", {duration: 2, backgroundColor: "blue"});
+tl.to("#red", {duration: 1, backgroundColor: "red"});
 
-var tween = gsap.to(".head", {
-  duration: 5, 
+tl.to("#orange", {duration: 1, backgroundColor: "orange"});
+
+tl.to(".green", {duration: 1, backgroundColor: "green"});
+
+var tween = tl.to(".head", {
+  duration: 3,
   y: 200, 
   backgroundColor: "yellow", 
   borderRadius: "20%", 
-  border: "2px solid blue", 
+  border: "1px solid blue", 
   ease: "bounce", 
   rotation: 360
 });
