@@ -1,3 +1,19 @@
+var tr = gsap.timeline({repeat:6, repeatDelay:1, yoyo:true});
+tr.to("h2", {duration: 0.2, className:"+=superShadow", top:"-=10px", ease:"power1.in", stagger: 0.3}, "start")
+
+//animation powered by GSAP JS
+//http:www.greensock.com/gsap/
+  
+
+
+
+/*
+special thanks to Daniel Riemer who created the text-shadow style and original pen
+
+https://codepen.io/zitrusfrisch
+
+*/
+
 var tl = gsap.timeline();
 
 tl.from(".head", {duration: 2, opacity: 0, scale: 0.1, ease: "back"});
